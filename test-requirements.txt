@@ -1,0 +1,16 @@
+extras==0.0.3
+fixtures==1.0.0
+flake8==2.2.4
+hacking==0.10.1
+linecache2==1.0.0
+mccabe==0.2.1
+pbr==0.10.8
+pep8==1.5.7
+pyflakes==0.8.1
+python-mimeparse==0.1.4
+python-subunit==1.1.0
+six==1.9.0
+testrepository==0.0.20
+testtools==1.7.1
+traceback2==1.4.0
+unittest2==1.0.1
