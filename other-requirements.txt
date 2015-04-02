@@ -1,0 +1,5 @@
+# setuptools dies in a ball of fire with URLs like this in requirements.txt
+# put them in this file for now
+
+# grab master for an un-released feature that builds a configdrive for us
+git+https://github.com/openstack/python-ironicclient@master#egg=python-ironicclient
