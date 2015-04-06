@@ -54,10 +54,8 @@ class IronicClientWrapper(object):
             self._cached_client = cli
 
         except ironic.exc.Unauthorized:
-            msg = 'Unable to authenticate Ironic client.'
-            LOG.error(msg)
-            # TODO(jroll) replace this
-            raise Exception(msg)
+            LOG.error('Unable to authenticate Ironic client.')
+            raise exception.IronicAuthError()
 
         return cli
 
@@ -113,7 +111,6 @@ class IronicClientWrapper(object):
                     'total': num_attempts})
             if attempt == num_attempts:
                 LOG.error(msg)
-                # TODO(jroll) replace this
-                raise Exception(msg)
+                raise exception.IronicError(msg)
             LOG.warning(msg)
             time.sleep(retry_interval)
